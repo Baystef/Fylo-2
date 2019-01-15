@@ -1,0 +1,15 @@
+{
+  "name": "fylo-2",
+  "version": "1.0.0",
+  "description": "Fylo",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w styles.scss -o styles --recursive"
+  },
+  "keywords": [],
+  "author": "Debayo",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
