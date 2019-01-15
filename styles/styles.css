@@ -35,25 +35,27 @@ ul, ol {
   .main-nav .social-icon {
     width: 2rem;
     height: 2rem;
-    color: black; }
+    color: white; }
 
 .main-header {
   background-image: url("images/illustration-main.svg");
   z-index: 2;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 25rem; }
+  height: 23rem; }
   .main-header__image {
     width: 100%; }
   .main-header__illustration {
     position: absolute;
     width: 100%;
-    padding: 3rem 3rem; }
+    padding: 3rem;
+    margin: 3rem auto; }
 
 .main-section {
   padding: 1rem 2rem; }
   .main-section__text {
-    color: gray; }
+    color: gray;
+    font-size: 0.9rem; }
   .main-section__form {
     display: flex;
     flex-direction: column; }

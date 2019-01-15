@@ -51,7 +51,7 @@ ul, ol {
     .social-icon {
         width: 2rem;
         height: 2rem;
-        color: black;
+        color: white;
     }
 }
 
@@ -60,7 +60,7 @@ ul, ol {
     z-index: 2;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 25rem;
+    height: 23rem;
 
     &__image {
         width: 100%;
@@ -69,7 +69,8 @@ ul, ol {
     &__illustration {
         position: absolute;
         width: 100%;
-        padding: 3rem 3rem;
+        padding: 3rem;
+        margin: 3rem auto;
     }
 }
 
@@ -78,6 +79,7 @@ ul, ol {
 
     &__text {
         color: $neutral;
+        font-size: 0.9rem;
     }
 
     &__form {
