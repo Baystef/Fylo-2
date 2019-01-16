@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700');
+
 $primary-color-1: hsl(243, 86%, 85%);
 $primary-color-2: hsl(243, 87%, 12%);
 $accent: hsl(163, 95%, 43%);
@@ -18,11 +21,21 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
 }
 
 ul, ol {
     margin: 0;
     padding: 0;
+}
+
+h1 {
+    font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+}
+
+.wrapper {
+    display: grid;
 }
 
 .main-nav {
@@ -56,14 +69,11 @@ ul, ol {
 }
 
 .main-header {
-    background-image: url('images/illustration-main.svg');
-    z-index: 2;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 23rem;
 
     &__image {
         width: 100%;
+        height: 25rem;
     }
 
     &__illustration {
@@ -71,6 +81,7 @@ ul, ol {
         width: 100%;
         padding: 3rem;
         margin: 3rem auto;
+        z-index: 2;
     }
 }
 
@@ -107,14 +118,15 @@ ul, ol {
             border-radius: 3px;
         }
     }
+    
+    &__link {
+        margin-top: 2rem;
+        margin-bottom: 0.25rem;
+        float: right;
+        font-size: 0.8rem;
+    }
 }
 
-.main-section__link {
-    margin-top: 2rem;
-    margin-bottom: 0.25rem;
-    float: right;
-    font-size: 0.8rem;
-}
 
 @media (min-width: 40rem) {
    
@@ -131,10 +143,77 @@ ul, ol {
     }
 
     .wrapper {
-        display: grid;
+        height: 100vh;
         grid-template-columns: 1fr 1.25fr;
         grid-template-areas: 
-        "header nav"
         "header section";
+    }
+
+    .mobile-nav {
+       display: none;
+    }
+
+    .desktop-nav {
+        position: absolute;
+        width: 100%;
+        top: 10%;
+
+        .social-icon {
+            color: black;
+            margin-left: 0.8rem;
+        }
+        
+    }
+
+    .main-header {
+        position: relative;
+        background: linear-gradient(45deg, $primary-color-1, $primary-color-2);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+
+        &__image {
+           display: none;
+        }
+
+        &__illustration {
+           width: 25rem;
+           height: 25rem;
+           padding: 3rem;
+        }
+    }
+
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+       
+        &__form {
+            // flex-direction: row;
+            display: grid;
+            align-items: center;
+
+            &--input {
+                grid-column: 1;
+                grid-row: 2;
+                border: none;
+                box-shadow: 1px 2px 4px lighten($neutral, 30);
+            }
+
+            &--button {
+                grid-column: 2;
+                grid-row: 2;
+                margin-left: 1rem;
+            }
+        }
+
+        &__link {
+            position: absolute;
+            right: 10%;
+            bottom: 5%;
+        }
     }
 }
