@@ -1,0 +1,107 @@
+@media (min-width: 40rem) {
+   
+    .main-nav {
+        grid-area: nav;
+    }
+
+    .main-header {
+        grid-area: header;
+    }
+
+    .main-section {
+        grid-area: section;
+    }
+
+    .wrapper {
+        height: 100vh;
+        grid-template-columns: 1fr 1.25fr;
+        grid-template-areas: 
+        "header section";
+    }
+
+    .mobile-nav {
+       display: none;
+    }
+
+    .desktop-nav {
+        position: absolute;
+        width: 100%;
+        top: 5%;
+
+        .social-icon {
+            color: black;
+            margin-left: 0.8rem;
+            @include ease;
+
+            &:hover {
+                font-size: 1.5rem;
+                color: $primary-color-1;
+            }
+        }
+        
+    }
+
+    .main-header {
+        position: relative;
+        background: linear-gradient(45deg, $primary-color-1, $primary-color-2);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+
+        &__image {
+           display: none;
+        }
+
+        &__illustration {
+           width: 25rem;
+           height: 25rem;
+           padding: 3rem;
+        }
+    }
+
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+       
+        &__form {
+            // flex-direction: row;
+            display: grid;
+            align-items: center;
+            grid-gap: 1rem;
+            
+
+            &--input {
+                grid-column: 1;
+                grid-row: 2;
+                border: none;
+                box-shadow: 1px 2px 4px lighten($neutral, 30);
+                @include ease;
+
+                &:hover {
+                    box-shadow: 1px 2px 8px lighten($neutral, 30);
+                }
+            }
+
+            &--button {
+                grid-column: 2;
+                grid-row: 2;
+                width: 100%;
+                border-bottom: 3px solid darken($accent, 10);
+
+                &:active {
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        &__link {
+            position: absolute;
+            right: 10%;
+            bottom: 5%;
+        }
+    }
+}
